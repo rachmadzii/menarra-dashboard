@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Menarra Finance - Dashboard</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/css/styles.css"
+      type="text/css"
+      media="screen"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="d-flex justify-content-center pt-3 pb-5 pe-4">
+          <img
+            src="assets/images/logo.svg"
+            alt="Logo"
+            width="140px"
+            height="40px"
+          />
+        </div>
+        <div class="menu pt-2 pb-3">
+          <p>Daily Use</p>
+          <ul class="p-0">
+            <li>
+              <a href="#" class="active"><img src="assets/images/ic_overview_act.svg" class="icon"></img>Overview</a>
+            </li>
+            <li>
+              <a href="#"><img src="assets/images/ic_transaction_inact.svg" class="icon">Transactions</a>
+            </li>
+            <li>
+              <a href="#"><img src="assets/images/ic_messages_inact.svg" class="icon">Messages</a>
+            </li>
+            <li>
+              <a href="#"><img src="assets/images/ic_overview_inact.svg" class="icon">Stats</a>
+            </li>
+            <li>
+              <a href="#"><img src="assets/images/ic_account_inact.svg" class="icon">Account</a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu pt-2">
+          <p>Others</p>
+          <ul class="p-0">
+            <li>
+              <a href="#"><img src="assets/images/ic_settings_inact.svg" class="icon">Settings</a>
+            </li>
+            <li>
+              <a href="#"><img src="assets/images/ic_help_inact.svg" class="icon">Help</a>
+            </li>
+            <li>
+              <a href="#"><img src="assets/images/ic_logout_inact.svg" class="icon">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main_content">
+        <div class="header">
+          <div>
+            <h3>Overview</h3>
+            <p>Manage data for growth</p>
+          </div>
+          <div class="d-flex flex-row gap-4 align-items-center">
+            <input
+              type="text"
+              placeholder="Search report or product"
+              class="search form-control"
+            />
+            <button
+              class="btn btn-search d-flex justify-content-center align-items-center p-0"
+              type="button"
+            >
+              <img
+                src="assets/images/ic_search.svg"
+                width="20px"
+                height="20px"
+              />
+            </button>
+            <img src="assets/images/avatar.jpg" alt="avatar" class="avatar" />
+          </div>
+        </div>
+        <div class="information">
+          <div class="d-flex flex-row gap-5">
+            <div class="card debit d-flex flex-column justify-content-between">
+              <img src="assets/images/ic_card.svg" alt="icon card" width="54px" />
+              <p class="number">
+                •••• &nbsp;&nbsp; 2208 &nbsp;&nbsp; 1996
+              </p>
+              <div>
+                <p class="name">Shayna Qowy</p>
+                <p class="valid">20/24</p>
+              </div>
+            </div>
+            <div class="card balance d-flex flex-column justify-content-between align-items-center">
+              <p>My Balance</p>
+              <h2>$90,500,000</h2>
+              <div>
+                <p class="m-0 fw-bold">+22%</p>
+              </div>
+            </div>
+            <div class="card balance d-flex flex-column justify-content-between align-items-center">
+              <p>My Balance</p>
+              <h2>$90,500,000</h2>
+              <div>
+                <p class="m-0 fw-bold">+22%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
