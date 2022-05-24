@@ -1,19 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700';
 
 * {
   font-family: 'Poppins', sans-serif;
 }
 
 body {
+  margin: 0;
   background: #f8f9fd;
 }
 
-.sidebar {
-  width: 280px;
-  height: 100%;
-  padding: 30px 0px;
-  position: fixed;
-  /* overflow-y: auto; */
+.hamburger {
+  border: none;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #f8f9fd;
+  color: #fff;
+  transition: all 0.3s;
+  overflow-y: auto;
+}
+
+#sidebar.active {
+  margin-left: -250px;
 }
 
 .menu p {
@@ -129,18 +146,19 @@ ul li.active::before {
   background-color: #3547ac;
 }
 
-.main-content {
-  margin-left: 270px;
-  padding: 42px 48px;
+#content {
+  width: 100%;
+  padding: 32px;
   min-height: 100vh;
-  background-color: #fff;
+  transition: all 0.3s;
+  background: #fff;
   border-radius: 50px 0 0 50px;
 }
 
 .header {
   display: flex;
+  flex-direction: column;
   margin-bottom: 26px;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -156,7 +174,7 @@ ul li.active::before {
   font-size: 16px;
 }
 
-.header .search {
+.navbar .search {
   width: 300px;
   height: 40px;
   font-size: 14px;
@@ -168,17 +186,17 @@ ul li.active::before {
   padding: 0 20px;
 }
 
-.header .btn-search {
+.navbar .btn-search {
   background-color: #dce2f4;
   color: #000000;
   border-radius: 50px;
   width: 40px;
   height: 40px;
   position: absolute;
-  margin-left: 260px;
+  margin-right: 70px;
 }
 
-.header .avatar {
+.navbar .avatar {
   width: 50px;
   height: 50px;
   padding: 4px;
@@ -186,10 +204,6 @@ ul li.active::before {
   box-sizing: border-box;
   border-radius: 50px;
   border: 1px solid #3547ac;
-}
-
-.information {
-  color: #717171;
 }
 
 .information .card {
@@ -204,6 +218,7 @@ ul li.active::before {
 .debit {
   background-image: url('../../assets/images/bg_card.png');
   background-size: cover;
+  background-color: #3547ac;
   display: flex;
   justify-content: space-between;
   color: #fff;
@@ -262,10 +277,6 @@ ul li.active::before {
   margin-bottom: 30px;
 }
 
-.revenue > div {
-  width: 510px;
-}
-
 .transaction .icon-history {
   width: 70px;
   height: 70px;
@@ -301,4 +312,28 @@ ul li.active::before {
 .transaction .income {
   font-weight: 500;
   color: #3547ac;
+}
+
+@media (max-width: 1024px) {
+  .information .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #content {
+    width: auto;
+  }
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #content {
+    padding: 16px;
+  }
 }
