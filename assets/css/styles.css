@@ -14,6 +14,10 @@ body {
   .information .card {
     width: 100%;
   }
+  #chart-revenue {
+    width: 100% !important;
+    height: auto !important;
+  }
 }
 
 @media (max-width: 480px) {
